@@ -1,0 +1,110 @@
+/* HEADER */
+#header_padrao {
+    background-color: var(--azulP);
+}
+
+#header_padrao .header_conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+#header_padrao .menu_barras {
+    display: none;
+    z-index: 1;
+}
+
+#header_padrao .menu_barras>img {
+    width: 50px;
+}
+
+#header_padrao .barras{
+    /* border-top: 5px solid var(--branco); */
+    width: 40px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: var(--branco);
+    display: block;
+    margin-top: 5px;
+    position: relative;
+    transition: .5s;
+}
+
+#header_padrao .barras::after{
+    content: '';
+    display: block;
+    width: 40px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: var(--branco);
+    position: absolute;
+    top: 12px;
+    transition: .5s;
+}
+
+#header_padrao .barras::before{
+    content: '';
+    display: block;
+    width: 40px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: var(--branco);
+    position: absolute;
+    top: -12px;
+    transition: .5s;
+}
+
+#header_padrao .ativo .barras{
+    /* background-color: transparent; */
+    transform: rotate(135deg);
+}
+
+#header_padrao .ativo .barras::after{
+    transform: rotate(-270deg);
+    top: 0;
+}
+
+#header_padrao .ativo .barras::before{
+    /* transform: rotate(90deg); */
+    top: 0;
+}
+
+#header_padrao .header_logo {
+    width: 50%;
+    max-width: 220px;
+}
+
+#header_padrao nav {
+    max-width: 550px;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font1);
+    font-size: 18px;
+}
+
+#header_padrao nav>div {
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+}
+
+#header_padrao nav a {
+    color: var(--branco);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: var(--font2);
+}
+
+#header_padrao .header_botao_login {
+    border: 4px solid var(--rosa);
+    padding: 4px 30px;
+    border-radius: 30%;
+    font-family: var(--font1);
+}
+
+#header_padrao .header_icone_login{
+    display: none;
+}
