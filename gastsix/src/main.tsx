@@ -1,4 +1,4 @@
-//Imports React - adicionar importes dos componentes React abaixo 
+//Imports React - adicionar imports dos componentes React abaixo 
 import React, { useEffect } from 'react'
 import ReactDOM from 'react-dom/client'
 import { Link, BrowserRouter, Routes, Route } from 'react-router-dom'
