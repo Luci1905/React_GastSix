@@ -9,6 +9,7 @@ import './index.css'
 import Header from "../src/componentes/Header";
 import Menu_Lateral from "./componentes/Menu_Lateral";
 import Cad_Produto from "./pages/Cad_Produto";
+import Tel_Ajuste from "./pages/Tel_Ajuste";
 
 //estilização global
 import "./index.css";
@@ -22,7 +23,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <Header />
       <Menu_Lateral />
       <Routes>{/*Indica uma lista de rotas*/}
-        <Route path='/cadastro/produto' element={<Cad_Produto />} /> {/*Indica o caminho do componente e o nome da rota dele*/}
+        <Route path='/cadastroProduto' element={<Cad_Produto />} /> {/*Indica o caminho do componente e o nome da rota dele*/}
+        <Route path='/telaAjuste' element={<Tel_Ajuste />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

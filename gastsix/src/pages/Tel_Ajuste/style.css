@@ -1,0 +1,108 @@
+/* SECAO FORMULARIO*/
+
+.aj_section__formulario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.aj_formulario-central {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    max-width: 700px;
+}
+
+.aj_div__alinhamento_campos {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font1);
+    font-size: 20px;
+    width: 100%;
+    color: var(--branco);
+    margin: 20px 0 0 0;
+    
+
+}
+
+.aj_div__alinhamento_campos_quantidade {
+    width: 90%;
+    max-width: 700px;
+    color: var(--branco);
+    font-size: 20px;
+    font-family: var(--font1);
+    display: flex;
+    flex-direction: column;
+}
+
+.aj_div__alinhamento_campos input {
+    margin-top: 11px;
+    margin-bottom: 35px;
+    background: rgba(255, 255, 255, 0.11);
+    backdrop-filter: blur(4px); 
+    border-radius: 5px;
+    width:90%;
+    height: 35px;
+    color: var(--branco);
+}
+
+.aj_botao {
+    height: 40px;
+    width: 120px;
+    border-radius: 10px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: var(--font1);
+    margin: 0 0 -20px 0;
+}
+
+.aj_section__formulario_table {
+     background: rgba(255, 255, 255, 0.11);
+    backdrop-filter: blur(4px); 
+    border-radius: 5px;
+    width: 100%;
+    height: 35px;
+    padding: 10px 0 20px 0;
+}
+
+
+table * {
+    border: 1px solid var(--branco);
+    width: 20%;
+}
+
+/*Respansividade*/
+
+@media screen and (max-width: 768px) {
+
+    h1{
+        font-size: 20px;
+    }
+     h2{
+        font-size: 18px;
+    } 
+    .banner{
+        height: 1200px;
+    }
+    .botao_fechar svg {
+        height: 15px;
+    }
+    .aj_formulario-central{
+        display: flex;
+        flex-direction: column;
+    }
+    .aj_div__alinhamento_campos input { 
+        width:100%;
+    }
+    .aj_botao{
+        font-size: 12px;
+        margin: 0 0 30px 0;
+    }
+    .aj_div__alinhamento_campos_quantidade {
+        font-size: 13px;
+    }
+    
+}
