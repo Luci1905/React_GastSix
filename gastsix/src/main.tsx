@@ -9,6 +9,7 @@ import './index.css';
 import Header from "../src/componentes/Header";
 import Menu_Lateral from "./componentes/Menu_Lateral";
 import Cad_Produto from "./pages/Cad_Produto";
+import Cad_Fornecedores from './pages/Cad_Fornecedores';
 import Tel_Ajuste from "./pages/Tel_Ajuste";
 import Ent_Estoque from "./pages/Ent_Estoque";
 import Con_Estoque from "./pages/Ent_Estoque";
@@ -24,6 +25,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <Menu_Lateral />
       <Routes>{/*Indica uma lista de rotas*/}
         <Route path='/cadastroProduto' element={<Cad_Produto />} /> {/*Indica o caminho do componente e o nome da rota dele*/}
+        <Route path='/cadastroFornecedores' element={<Cad_Fornecedores />} />
         <Route path='/telaAjuste' element={<Tel_Ajuste />} />
         <Route path='/entEstoque' element={<Ent_Estoque />} />
         <Route path='/conEstoque' element={<Con_Estoque />} />
