@@ -13,6 +13,7 @@ import Tel_Ajuste from "./pages/Tel_Ajuste";
 import Ent_Estoque from "./pages/Ent_Estoque";
 import Con_Estoque from "./pages/Ent_Estoque";
 import Cad_Dispositivo from './pages/Cad_Dispositivo';
+import Rel_Estoque from './pages/Rel_Estoque';
 
 //rotas
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -28,6 +29,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path='/entEstoque' element={<Ent_Estoque />} />
         <Route path='/conEstoque' element={<Con_Estoque />} />
         <Route path='/cadastroDispositivo' element={<Cad_Dispositivo />} />
+        <Route path='/relatorioEstoque' element={<Rel_Estoque />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

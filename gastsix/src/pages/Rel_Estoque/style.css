@@ -1,0 +1,56 @@
+/* SECAO FORMULARIO*/
+
+.formulario_central img { 
+    width: 80%; 
+} 
+.formulario_central {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+} 
+
+.div_alinhamento_botao_cadastrar{
+   display: flex;
+   justify-content: space-between;
+   width: 60%;
+   padding: 100px 0 0 0;
+}
+
+.botao_gerar{
+   height: 50px;
+   width: 40%;
+   border-radius: 10px;
+   font-size: 18px;
+   text-transform: uppercase;
+   font-weight: bold; 
+   font-family: var(--font1); 
+}
+
+/*Respansividade*/
+
+@media screen and (max-width: 768px) {
+    /* FORMULARIO CENTRAL*/
+
+    .formulario_central{
+        padding: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+    }
+    .section_formulario{
+        width: 150%;
+    } 
+    
+    .div_alinhamento_botao_cadastrar{
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .botao_gerar{
+        width: 80%;
+        font-size: 12px;
+    }
+}
