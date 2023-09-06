@@ -10,6 +10,7 @@ import Header from "../src/componentes/Header";
 import Menu_Lateral from "./componentes/Menu_Lateral";
 import Cad_Produto from "./pages/Cad_Produto";
 import Tel_Ajuste from "./pages/Tel_Ajuste";
+import Rel_Movimentacao from './pages/Rel_Movimentacao';
 
 //estilização global
 import "./index.css";
@@ -25,6 +26,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <Routes>{/*Indica uma lista de rotas*/}
         <Route path='/cadastroProduto' element={<Cad_Produto />} /> {/*Indica o caminho do componente e o nome da rota dele*/}
         <Route path='/telaAjuste' element={<Tel_Ajuste />} />
+        <Route path='/relatorioMovimentacao' element={<Rel_Movimentacao />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
