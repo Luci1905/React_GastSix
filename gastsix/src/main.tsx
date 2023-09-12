@@ -15,6 +15,7 @@ import Tel_Ajuste from "./pages/Tel_Ajuste";
 import Ent_Estoque from "./pages/Ent_Estoque";
 import Con_Estoque from "./pages/Ent_Estoque";
 import Cad_Dispositivo from './pages/Cad_Dispositivo';
+<<<<<<< HEAD
 import Rel_Movimentacao from './pages/Rel_Movimentacao';
 =======
 import Rel_Operadores from './pages/Rel_Operadores';
@@ -22,6 +23,9 @@ import Rel_Operadores from './pages/Rel_Operadores';
 //estilização global
 import "./index.css";
 >>>>>>> rel_operadores
+=======
+import Rel_Estoque from './pages/Rel_Estoque';
+>>>>>>> rel_estoque
 
 //rotas
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -39,10 +43,14 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path='/entEstoque' element={<Ent_Estoque />} />
         <Route path='/conEstoque' element={<Con_Estoque />} />
         <Route path='/cadastroDispositivo' element={<Cad_Dispositivo />} />
+<<<<<<< HEAD
         <Route path='/relatorioMovimentacao' element={<Rel_Movimentacao />} />
 =======
         <Route path='/relatorioOperadores' element={<Rel_Operadores />} />
 >>>>>>> rel_operadores
+=======
+        <Route path='/relatorioEstoque' element={<Rel_Estoque />} />
+>>>>>>> rel_estoque
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
