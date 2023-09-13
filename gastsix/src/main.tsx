@@ -18,9 +18,13 @@ import Rel_Movimentacao from './pages/Rel_Movimentacao';
 import Rel_Operadores from './pages/Rel_Operadores';
 import Rel_Estoque from './pages/Rel_Estoque';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Imp_Pedido from './pages/Imp_Pedido';
 =======
 import Vis_Pedido from './pages/Vis_Pedido';
+=======
+import Lan_Pedido from './pages/Lan_Pedido';
+>>>>>>> lan_pedido
 
 >>>>>>> vis_pedidos_opcional
 
@@ -44,11 +48,15 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path='/relatorioOperadores' element={<Rel_Operadores />} />
         <Route path='/relatorioEstoque' element={<Rel_Estoque />} />
 <<<<<<< HEAD
+<<<<<<< HEAD
         <Route path='/impPedido' element={<Imp_Pedido />} />
 
 =======
         <Route path='/visualizarPedido' element={<Vis_Pedido />} />
 >>>>>>> vis_pedidos_opcional
+=======
+        <Route path='/lancarPedido' element={<Lan_Pedido />} />
+>>>>>>> lan_pedido
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
