@@ -2,7 +2,13 @@ import "./style.css";
 
 import imgRelmov from "../../assets/img/img_rel_movimentacao.png";
 
+//Hooks
+import { useState } from "react"
+
 function Rel_Movimentacao() {
+    const [dataInicial, setDataInicial] = useState<string>("");
+    const [dataFinal, setDataFinal] = useState<string>("");
+
     return (
         <main className="banner">
             {/*indica o conteudo principal*/}
@@ -17,6 +23,7 @@ function Rel_Movimentacao() {
                                 type="date"
                                 name="input__dataadm"
                                 id=""
+                                onChange={(e) => setDataInicial(e.target.value)}
                             />
                         </div>
                         <div className="div_alinhamento_data">
@@ -26,6 +33,7 @@ function Rel_Movimentacao() {
                                 type="date"
                                 name="input__dataadm"
                                 id=""
+                                onChange={(e) => setDataFinal(e.target.value)}
                             />
                         </div>
                     </div>
