@@ -17,10 +17,12 @@ import Cad_Dispositivo from './pages/Cad_Dispositivo';
 import Rel_Movimentacao from './pages/Rel_Movimentacao';
 import Rel_Operadores from './pages/Rel_Operadores';
 import Rel_Estoque from './pages/Rel_Estoque';
+import Lan_Pedido from './pages/Lan_Pedido';
 
 
 //rotas
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -37,6 +39,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path='/relatorioMovimentacao' element={<Rel_Movimentacao />} />
         <Route path='/relatorioOperadores' element={<Rel_Operadores />} />
         <Route path='/relatorioEstoque' element={<Rel_Estoque />} />
+        <Route path='/lancarPedido' element={<Lan_Pedido />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
