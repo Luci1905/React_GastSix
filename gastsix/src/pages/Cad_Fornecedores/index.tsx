@@ -16,13 +16,13 @@ function Cad_Fornecedores() {
     console.log(event.target.value);
 
     // Remove todos os caracteres não-alfanuméricos
-    let cnpj = event.target.value.replace(/[^a-zA-Z0-9]/g, "");
+    let cnpjValue = event.target.value.replace(/[^a-zA-Z0-9]/g, "");
 
     // Aplica a máscara
-    cnpj = cnpj.replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/, "$1.$2.$3/$4-$5");
+    cnpjValue = cnpjValue.replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/, "$1.$2.$3/$4-$5");
 
     // Atualiza o valor do campo CNPJ com a máscara aplicada
-    event.target.value = cnpj;
+    setCnpj(cnpjValue);
 
   }
   return (
@@ -38,6 +38,7 @@ function Cad_Fornecedores() {
               name="input__id"
               id=""
               onChange={(e) => setId(e.target.value)}
+              required
             />
           </div>
           <div className="div__alinhamento_campos">
@@ -47,6 +48,7 @@ function Cad_Fornecedores() {
               name="input__nome"
               id=""
               onChange={(e) => setNome(e.target.value)}
+              required
             />
           </div>
           <div className="div__alinhamento_campos">
@@ -55,7 +57,11 @@ function Cad_Fornecedores() {
               type="text"
               name="input__cnpj"
               id=""
-              onChange={(e) => setCnpj(e.target.value)}
+              value={cnpj}
+              minLength={14}
+              maxLength={14}
+              onChange={mascaraCNPJ}
+              required
             />
           </div>
           <div className="div__alinhamento_campos">
@@ -65,6 +71,7 @@ function Cad_Fornecedores() {
               name="input__ie"
               id=""
               onChange={(e) => setIe(e.target.value)}
+              required
             />
           </div>
           <div className="div__alinhamento_campos">
@@ -74,6 +81,7 @@ function Cad_Fornecedores() {
               name="input__rs"
               id=""
               onChange={(e) => setRazaosocial(e.target.value)}
+              required
             />
           </div>
           <div className="div__alinhamento_campos">
@@ -83,6 +91,7 @@ function Cad_Fornecedores() {
               name="input__E-mail"
               id=""
               onChange={(e) => setEmail(e.target.value)}
+              required
             />
           </div>
           <div className="div__alinhamento_campos">
@@ -92,6 +101,7 @@ function Cad_Fornecedores() {
               name="input__end"
               id=""
               onChange={(e) => setEndereco(e.target.value)}
+              required
             />
           </div>
           <button className="botao_cadastrar" type="submit">
