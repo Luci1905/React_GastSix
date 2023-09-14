@@ -24,6 +24,7 @@ function Cad_Produtos() {
               name="input__discricao"
               id=""
               onChange={(e) => setDescricao(e.target.value)}
+              required
             />
           </div>
           <div className="div__alinhamento_campos">
@@ -33,6 +34,7 @@ function Cad_Produtos() {
               name="input__pat"
               id=""
               onChange={(e) => setPartnumber(e.target.value)}
+              required
             />
           </div>
           <div className="div__alinhamento_campos">
@@ -42,6 +44,7 @@ function Cad_Produtos() {
               name="input__codigoalt"
               id=""
               onChange={(e) => setCodigoAlternativo(e.target.value)}
+              required
             />
           </div>
           <div className="div__alinhamento_campos">
@@ -51,6 +54,7 @@ function Cad_Produtos() {
               name="input__codigofor"
               id=""
               onChange={(e) => setCodigoFornecedor(e.target.value)}
+              required
             />
           </div>
           <div className="div__alinhamento_campos">
@@ -60,6 +64,7 @@ function Cad_Produtos() {
               name="input__codigosap"
               id=""
               onChange={(e) => setCodigoSap(e.target.value)}
+              required
             />
           </div>
           <button className="botao_cadastrar" type="submit">
