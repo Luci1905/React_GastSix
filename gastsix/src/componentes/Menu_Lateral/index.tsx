@@ -4,32 +4,36 @@ import "./style.css"
 
 function MenuLateral() {
 
-  let menu: any = document.getElementById("menu_lateral");
-  let menu_barras: any = document.getElementById("menu_barras");
+  // let menu: any = document.getElementById("menu_lateral");
+  // let menu_barras: any = document.getElementById("menu_barras");
 
-  // CADASTRO
+  // // CADASTRO
 
-  let menu_cadastros: any = document.getElementById("menu_lateral_cadastro");
-  let menu_cadastro_aberto: any = document.getElementById("menu_cadastro_aberto");
+  // let menu_cadastros: any = document.getElementById("menu_lateral_cadastro");
+  // let menu_cadastro_aberto: any = document.getElementById("menu_cadastro_aberto");
 
-  // ESTOQUE
+  // // ESTOQUE
 
-  let menu_estoque: any = document.getElementById("menu_lateral_estoque");
-  let menu_estoque_aberto: any = document.getElementById("menu_estoque_aberto");
+  // let menu_estoque: any = document.getElementById("menu_lateral_estoque");
+  // let menu_estoque_aberto: any = document.getElementById("menu_estoque_aberto");
 
-  // PEDIDO
+  // // PEDIDO
 
-  let menu_pedidos: any = document.getElementById("menu_lateral_pedidos");
-  let menu_pedidos_aberto: any = document.getElementById("menu_pedidos_aberto");
+  // let menu_pedidos: any = document.getElementById("menu_lateral_pedidos");
+  // let menu_pedidos_aberto: any = document.getElementById("menu_pedidos_aberto");
 
-  // RELATORIOS
+  // // RELATORIOS
 
-  let menu_relatorios: any = document.getElementById("menu_lateral_relatorios");
-  let menu_relatorios_aberto: any = document.getElementById("menu_relatorios_aberto");
+  // let menu_relatorios: any = document.getElementById("menu_lateral_relatorios");
+  // let menu_relatorios_aberto: any = document.getElementById("menu_relatorios_aberto");
 
 
 
   function mostrarMenu() {
+    
+     let menu: any = document.getElementById("menu_lateral");
+     let menu_barras: any = document.getElementById("menu_barras");
+    
     if (window.getComputedStyle(menu).display == "none") {
       menu.style.display = "flex"
       menu_barras.setAttribute("aria-label", "fechar menu")
@@ -44,6 +48,12 @@ function MenuLateral() {
   // CADASTRO
 
   function mostrar_menu_cadastro() {
+    let menu_cadastros: any = document.getElementById("menu_lateral_cadastro");
+    let menu_cadastro_aberto: any = document.getElementById("menu_cadastro_aberto");
+    let menu_pedidos: any = document.getElementById("menu_lateral_pedidos");
+    let menu_estoque: any = document.getElementById("menu_lateral_estoque");
+    let menu_relatorios: any = document.getElementById("menu_lateral_relatorios");
+
     if (window.getComputedStyle(menu_cadastros).display == "none") {
       menu_cadastros.style.display = "flex"
       menu_estoque.style.display = "none"
@@ -56,13 +66,17 @@ function MenuLateral() {
       menu_cadastros.style.display = "none"
       menu_cadastro_aberto.setAttribute("aria-label", "abrir menu")
       menu_cadastro_aberto.setAttribute("aria-expandede", "false")
-
-
     }
   }
 
   // ESTOQUE
   function mostrar_menu_estoque() {
+    let menu_pedidos: any = document.getElementById("menu_lateral_pedidos");
+    let menu_estoque: any = document.getElementById("menu_lateral_estoque");
+    let menu_relatorios: any = document.getElementById("menu_lateral_relatorios");
+    let menu_cadastros: any = document.getElementById("menu_lateral_cadastro");
+    let menu_estoque_aberto: any = document.getElementById("menu_estoque_aberto");
+
     if (window.getComputedStyle(menu_estoque).display == "none") {
       menu_cadastros.style.display = "none"
       menu_estoque.style.display = "flex"
@@ -74,14 +88,18 @@ function MenuLateral() {
       menu_estoque.style.display = "none"
       menu_estoque_aberto.setAttribute("aria-label", "abrir menu")
       menu_estoque_aberto.setAttribute("aria-expandede", "false")
-
-
     }
   }
 
   // PEDIDOS
 
   function mostrar_menu_pedidos() {
+    let menu_pedidos: any = document.getElementById("menu_lateral_pedidos");
+    let menu_estoque: any = document.getElementById("menu_lateral_estoque");
+    let menu_relatorios: any = document.getElementById("menu_lateral_relatorios");
+    let menu_cadastros: any = document.getElementById("menu_lateral_cadastro");
+    let menu_pedidos_aberto: any = document.getElementById("menu_pedidos_aberto");
+
     if (window.getComputedStyle(menu_pedidos).display == "none") {
       menu_cadastros.style.display = "none"
       menu_estoque.style.display = "none"
@@ -99,6 +117,12 @@ function MenuLateral() {
   // RELATORIOS
 
   function mostrar_menu_relatorios() {
+    let menu_pedidos: any = document.getElementById("menu_lateral_pedidos");
+    let menu_estoque: any = document.getElementById("menu_lateral_estoque");
+    let menu_relatorios: any = document.getElementById("menu_lateral_relatorios");
+    let menu_cadastros: any = document.getElementById("menu_lateral_cadastro");
+    let menu_relatorios_aberto: any = document.getElementById("menu_relatorios_aberto");
+    
     if (window.getComputedStyle(menu_relatorios).display == "none") {
       menu_cadastros.style.display = "none"
       menu_estoque.style.display = "none"
@@ -116,15 +140,14 @@ function MenuLateral() {
   return (
     <>
       <aside className="posiciomaneto_menu">
-        <Link
+        <Link to={""}
           id="menu_barras"
           aria-label="abrir menu"
           aria-controls="menu_lateral"
           aria-expanded="false"
           aria-haspopup="true"
           className="menu_barras"
-          href="#"
-        //onClick={mostrarMenu}
+         onClick={mostrarMenu}
         >
           <svg
             width={170}
@@ -182,7 +205,7 @@ function MenuLateral() {
             aria-haspopup="true"
             className="menu_cadastro_aberto"
             href="#"
-          //onClick={mostrar_menu_cadastro}
+          onClick={mostrar_menu_cadastro}
           >
             cadastros &gt;{" "}
           </a>
@@ -195,7 +218,7 @@ function MenuLateral() {
             aria-haspopup="true"
             className="menu_estoque_aberto"
             href="#"
-          //onClick="mostrar_menu_estoque()"
+          onClick={mostrar_menu_estoque}
           >
             estoque &gt;{" "}
           </a>
@@ -208,7 +231,7 @@ function MenuLateral() {
             aria-haspopup="true"
             className="menu_pedido_aberto"
             href="#"
-          //onClick="mostrar_menu_pedidos()"
+          onClick={mostrar_menu_pedidos}
           >
             pedidos &gt;
           </a>

@@ -17,16 +17,9 @@ import Cad_Dispositivo from './pages/Cad_Dispositivo';
 import Rel_Movimentacao from './pages/Rel_Movimentacao';
 import Rel_Operadores from './pages/Rel_Operadores';
 import Rel_Estoque from './pages/Rel_Estoque';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Imp_Pedido from './pages/Imp_Pedido';
-=======
 import Vis_Pedido from './pages/Vis_Pedido';
-=======
 import Lan_Pedido from './pages/Lan_Pedido';
->>>>>>> lan_pedido
-
->>>>>>> vis_pedidos_opcional
 
 //rotas
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -43,20 +36,13 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path='/telaAjuste' element={<Tel_Ajuste />} />
         <Route path='/entradaEstoque' element={<Ent_Estoque />} />
         <Route path='/consultaEstoque' element={<Con_Estoque />} />
+        <Route path='/visualizarPedido' element={<Vis_Pedido />} />
+        <Route path='/lancarPedido' element={<Lan_Pedido />} />
+        <Route path='/importarPedido' element={<Imp_Pedido />} />
         <Route path='/cadastroDispositivo' element={<Cad_Dispositivo />} />
         <Route path='/relatorioMovimentacao' element={<Rel_Movimentacao />} />
         <Route path='/relatorioOperadores' element={<Rel_Operadores />} />
         <Route path='/relatorioEstoque' element={<Rel_Estoque />} />
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <Route path='/impPedido' element={<Imp_Pedido />} />
-
-=======
-        <Route path='/visualizarPedido' element={<Vis_Pedido />} />
->>>>>>> vis_pedidos_opcional
-=======
-        <Route path='/lancarPedido' element={<Lan_Pedido />} />
->>>>>>> lan_pedido
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
