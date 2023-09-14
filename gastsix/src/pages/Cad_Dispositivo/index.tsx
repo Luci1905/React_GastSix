@@ -22,7 +22,8 @@ function Cad_Dispositivo() {
                         type="text" 
                         name="input__codigo" 
                         id=""
-                        onChange={(e) =>setCodigoTipo(e.target.value)} 
+                        onChange={(e) =>setCodigoTipo(e.target.value)}
+                        required 
                         />
                     </div>
                     <div className="div__alinhamento_campos">
@@ -31,7 +32,8 @@ function Cad_Dispositivo() {
                         type="text" 
                         name="input__ip" 
                         id=""
-                        onChange={(e) =>setIP(e.target.value)} 
+                        onChange={(e) =>setIP(e.target.value)}
+                        required 
                         />
                     </div>
                     <div className="div__alinhamento_campos">
@@ -40,7 +42,8 @@ function Cad_Dispositivo() {
                         type="text" 
                         name="input__nomef" 
                         id=""
-                        onChange={(e) =>setNomeFabricante(e.target.value)} 
+                        onChange={(e) =>setNomeFabricante(e.target.value)}
+                        required 
                         />
                     </div>
                     <div className="div__alinhamento_campos">
@@ -49,7 +52,8 @@ function Cad_Dispositivo() {
                         type="text" 
                         name="input__tipo" 
                         id=""
-                        onChange={(e) =>setTipo(e.target.value)} 
+                        onChange={(e) =>setTipo(e.target.value)}
+                        required 
                         />
                     </div>
                     <div className="div__alinhamento_campos">
@@ -58,7 +62,8 @@ function Cad_Dispositivo() {
                         type="text" 
                         name="input__sisope" 
                         id=""
-                        onChange={(e) =>setSistemaOperacional(e.target.value)} 
+                        onChange={(e) =>setSistemaOperacional(e.target.value)}
+                        required 
                         />
                     </div>
                     <button className="botao_cadastrar" type="submit">
