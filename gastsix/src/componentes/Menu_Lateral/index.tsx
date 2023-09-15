@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "./style.css"
-
+import menu_inferior from "../../assets/img/menu_inferior.png"
+import menu_superior from "../../assets/img/menu_superior.png"
 
 function MenuLateral() {
 
@@ -170,7 +171,7 @@ function MenuLateral() {
         <nav id="menu_lateral" className="menu_lateral">
           <a href="">
             {" "}
-            <img src="../img/menu_superior.png" alt="" />
+            <img src={menu_superior} alt="" />
           </a>
           <a
             id="menu_cadastro_aberto"
@@ -224,16 +225,16 @@ function MenuLateral() {
             relatórios &gt;
           </a>
           <hr />
-          <Link to={""}>sair</Link>
+          <Link to={"/loginHome"}>sair</Link>
           <Link to={""}>
-            <img src="../img/menu_inferior.png" alt="" />
+            <img src={ menu_inferior} alt="" />
           </Link>
         </nav>
       </aside>
       {/* MENU CADASTROS */}
       <aside className="posiciomaneto_menu_cadastro">
         <nav id="menu_lateral_cadastro" className="menu_lateral_cadastro">
-          <Link to={""}>usuários</Link>
+          <Link to={"/cadastrousuario"}>usuários</Link>
           <hr />
           <Link to={"/cadastroProduto"}>produtos</Link>
           <hr />
@@ -245,7 +246,7 @@ function MenuLateral() {
       {/* MENU  ESTOQUE */}
       <aside className="posiciomaneto_menu_estoque">
         <nav id="menu_lateral_estoque" className="menu_lateral_estoque">
-          <Link to={""}>consulta</Link>
+          <Link to={"/consultaEstoque"}>consulta</Link>
           <hr />
           <Link to={"/entradaEstoque"}>entrada</Link>
           <hr />

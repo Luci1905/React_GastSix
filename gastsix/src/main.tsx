@@ -12,7 +12,7 @@ import Cad_Produto from "./pages/Cad_Produto";
 import Cad_Fornecedores from './pages/Cad_Fornecedores';
 import Tel_Ajuste from "./pages/Tel_Ajuste";
 import Ent_Estoque from "./pages/Ent_Estoque";
-import Con_Estoque from "./pages/Ent_Estoque";
+import Con_Estoque from "./pages/Con_Estoque";
 import Cad_Dispositivo from './pages/Cad_Dispositivo';
 import Rel_Movimentacao from './pages/Rel_Movimentacao';
 import Rel_Operadores from './pages/Rel_Operadores';
@@ -47,10 +47,10 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path='/relatorioMovimentacao' element={<Rel_Movimentacao />} />
         <Route path='/relatorioOperadores' element={<Rel_Operadores />} />
         <Route path='/relatorioEstoque' element={<Rel_Estoque />} />
-        <Route path='/relatorioMovimentacao' element={<Log_Home />} />
-        <Route path='/relatorioOperadores' element={<Login />} />
-        <Route path='/relatorioEstoque' element={<Quem_Somos />} />
-        <Route path='/relatorioEstoque' element={<Cad_Usuario />} />
+        <Route path='/loginHome' element={<Log_Home />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/quemsomos' element={<Quem_Somos />} />
+        <Route path='/cadastrousuario' element={<Cad_Usuario />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

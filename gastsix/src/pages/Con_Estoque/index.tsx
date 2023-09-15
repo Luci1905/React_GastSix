@@ -4,54 +4,61 @@ function Tel_Ajuste() {
   return (
     <main className="banner">
   {/*indica o conteudo principal*/}
-  <section className="aj_section__formulario">
-    {/*tag section indica uma secao*/}
-    <form className="aj_formulario-central">
-      <div className="aj_div__alinhamento_campos">
-        <label htmlFor="input__codigo">Codigo:</label>
-        <input type="text" name="input__codigo" id="" />
+  <section className="section_formulario">
+  {/*tag section indica uma secao*/}
+  <form className="formulario_central">
+    <div className="div_alinhamento_funcao_data">
+      <div className="div_alinhamento_data">
+        <label htmlFor="input_dataadm">Data Inicial:</label>
+        <input
+          className="div_alinhamento_campos_data"
+          type="date"
+          name="input__dataadm"
+          id=""
+        />
       </div>
-      <button className="aj_botao" type="submit">
-        Buscar
+      <div className="div_alinhamento_data">
+        <label htmlFor="input_dataadm">Data Final:</label>
+        <input
+          className="div_alinhamento_campos_data"
+          type="date"
+          name="input__dataadm"
+          id=""
+        />
+      </div>
+    </div>
+    <div className="div_botao_visualizar">
+      <button className="botao_visualizar" type="submit">
+        Visualizar
       </button>
-    </form>
+    </div>
     <div className="aj_div__alinhamento_campos_quantidade">
-      Quantidade Atual:
       <table className="aj_section__formulario_table">
         <tbody>
           <tr className="aj_tr">
-            <th>Item</th>
-            <th>Descrição</th>
-            <th>Quantidade</th>
+            <th>Cod.material</th>
+            <th>Descrição material</th>
+            <th>Posição no estoque</th>
           </tr>
           <tr>
-            <td>5NN839015A</td>
-            <td>Fechadura elétrica de porta</td>
-            <td>100</td>
-          </tr>
-          <tr>
-            <td>8X0831403E</td>
-            <td>Dobradiça de porta</td>
-            <td>50</td>
+            <td>83475t</td>
+            <td>Tampão</td>
+            <td>0137B1</td>
           </tr>
         </tbody>
       </table>
     </div>
-    <form className="aj_formulario-central" action="">
-      <div className="aj_div__alinhamento_campos">
-        <label
-          className="aj_ajustar_quantidade"
-          htmlFor="input__ajustar_quantidade"
-        >
-          Ajustar quantidade:
-        </label>
-        <input type="text" name="input__ajustar quantidade" id="" />
-      </div>
-      <button className="aj_botao" type="submit">
-        Inserir
+    <div className="div_alinhamento_botao_cadastrar">
+      <button className="botao_gerar" type="submit">
+        Gerar xml
       </button>
-    </form>
-  </section>
+      <button className="botao_gerar" type="submit">
+        Gerar pdf
+      </button>
+    </div>
+  </form>
+</section>
+
 </main>
   )
 }
