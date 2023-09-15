@@ -4,36 +4,11 @@ import "./style.css"
 
 function MenuLateral() {
 
-  // let menu: any = document.getElementById("menu_lateral");
-  // let menu_barras: any = document.getElementById("menu_barras");
-
-  // // CADASTRO
-
-  // let menu_cadastros: any = document.getElementById("menu_lateral_cadastro");
-  // let menu_cadastro_aberto: any = document.getElementById("menu_cadastro_aberto");
-
-  // // ESTOQUE
-
-  // let menu_estoque: any = document.getElementById("menu_lateral_estoque");
-  // let menu_estoque_aberto: any = document.getElementById("menu_estoque_aberto");
-
-  // // PEDIDO
-
-  // let menu_pedidos: any = document.getElementById("menu_lateral_pedidos");
-  // let menu_pedidos_aberto: any = document.getElementById("menu_pedidos_aberto");
-
-  // // RELATORIOS
-
-  // let menu_relatorios: any = document.getElementById("menu_lateral_relatorios");
-  // let menu_relatorios_aberto: any = document.getElementById("menu_relatorios_aberto");
-
-
-
   function mostrarMenu() {
     
      let menu: any = document.getElementById("menu_lateral");
      let menu_barras: any = document.getElementById("menu_barras");
-    
+
     if (window.getComputedStyle(menu).display == "none") {
       menu.style.display = "flex"
       menu_barras.setAttribute("aria-label", "fechar menu")
@@ -140,7 +115,7 @@ function MenuLateral() {
   return (
     <>
       <aside className="posiciomaneto_menu">
-        <Link to={""}
+        <Link to={"#"}
           id="menu_barras"
           aria-label="abrir menu"
           aria-controls="menu_lateral"
@@ -260,11 +235,11 @@ function MenuLateral() {
         <nav id="menu_lateral_cadastro" className="menu_lateral_cadastro">
           <Link to={""}>usuários</Link>
           <hr />
-          <Link to={""}>produtos</Link>
+          <Link to={"/cadastroProduto"}>produtos</Link>
           <hr />
-          <Link to={""}>dispositivos</Link>
+          <Link to={"/cadastroDispositivo"}>dispositivos</Link>
           <hr />
-          <Link to={""}>fornecedores</Link>
+          <Link to={"/cadastroFornecedores"}>fornecedores</Link>
         </nav>
       </aside>
       {/* MENU  ESTOQUE */}
@@ -272,29 +247,29 @@ function MenuLateral() {
         <nav id="menu_lateral_estoque" className="menu_lateral_estoque">
           <Link to={""}>consulta</Link>
           <hr />
-          <Link to={""}>entrada</Link>
+          <Link to={"/entradaEstoque"}>entrada</Link>
           <hr />
-          <Link to={""}>ajustes</Link>
+          <Link to={"/ajusteEstoque"}>ajustes</Link>
         </nav>
       </aside>
       {/* MENU  PEDIDOS */}
       <aside className="posiciomaneto_menu_pedidos">
         <nav id="menu_lateral_pedidos" className="menu_lateral_pedidos">
-          <Link to={""}>importar</Link>
+          <Link to={"/importarPedido"}>importar</Link>
           <hr />
-          <Link to={""}>visualizar</Link>
+          <Link to={"/visualizarPedido"}>visualizar</Link>
           <hr />
-          <Link to={""}>lançar</Link>
+          <Link to={"/lancarPedido"}>lançar</Link>
         </nav>
       </aside>
       {/* MENU  RELATORIO */}
       <aside className="posiciomaneto_menu_relatorios">
         <nav id="menu_lateral_relatorios" className="menu_lateral_relatorios">
-          <Link to={""}>movimentação</Link>
+          <Link to={"/relatorioMovimentacao"}>movimentação</Link>
           <hr />
-          <Link to={""}>operadores</Link>
+          <Link to={"/relatorioOperadores"}>operadores</Link>
           <hr />
-          <Link to={""}>estoque</Link>
+          <Link to={"/relatorioEstoque"}>estoque</Link>
 
         </nav>
       </aside>

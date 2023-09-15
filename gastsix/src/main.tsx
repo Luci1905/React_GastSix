@@ -33,7 +33,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <Routes>{/*Indica uma lista de rotas*/}
         <Route path='/cadastroProduto' element={<Cad_Produto />} /> {/*Indica o caminho do componente e o nome da rota dele*/}
         <Route path='/cadastroFornecedores' element={<Cad_Fornecedores />} />
-        <Route path='/telaAjuste' element={<Tel_Ajuste />} />
+        <Route path='/ajusteEstoque' element={<Tel_Ajuste />} />
         <Route path='/entradaEstoque' element={<Ent_Estoque />} />
         <Route path='/consultaEstoque' element={<Con_Estoque />} />
         <Route path='/visualizarPedido' element={<Vis_Pedido />} />

@@ -1,16 +1,33 @@
 import "./style.css";
 
 import imgLOGO from "../../assets/img/LOGO.png";
+import { useLocation } from "react-router-dom";
 
 // criando uma funcao header que retorna algo.
 function Header() {
+
+  function verificaComponentes {
+    const location = useLocation();
+    switch (location.pathname) {
+      case '/cadastroProduto':
+        return 'Cadastro de Produtos'
+        break;
+        
+      case '/cadastroProduto':
+        return 'Cadastro de Produtos'
+        break;
+
+      default:
+        break;
+    }
+  }
 
   return (
     <header>
       {/*cabecalho*/}
       <nav className="botao_nav">
         <img className="logo" src={imgLOGO} alt="" />
-        <h1>AJUSTAR DEPOIS</h1>
+        <h1>{verificaComponentes()}</h1>
         <a className="botao_fechar" href="fechar">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
             {/*! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. */}
