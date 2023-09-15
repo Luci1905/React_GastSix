@@ -6,7 +6,7 @@ import { useLocation } from "react-router-dom";
 // criando uma funcao header que retorna algo.
 function Header() {
 
-  function verificaComponentes {
+  function verificaComponentes() {
     const location = useLocation();
     switch (location.pathname) {
       case '/cadastroProduto':
@@ -21,37 +21,36 @@ function Header() {
         return 'Entrada de Estoque'
         break;
 
-        case '/ajusteEstoque':
+      case '/ajusteEstoque':
         return 'Ajustes de Estoque'
         break;
 
-        case '/consultaEstoque':
+      case '/consultaEstoque':
         return 'Consulta de Estoque'
         break;
 
-        case '/visualizarPedido':
+      case '/visualizarPedido':
         return 'Visualizar Pedidos'
         break;
 
-        case '/lancarPedido':
+      case '/lancarPedido':
         return 'Lançar Pedidos'
         break;
 
-        case '/importarPedido':
-          return 'Importar Pedidos'
-          break;
+      case '/importarPedido':
+        return 'Importar Pedidos'
+        break;
 
-          case '/cadastroDispositivo':
-          return 'Cadastro de Dispositivos'
-          break;
+      case '/cadastroDispositivo':
+        return 'Cadastro de Dispositivos'
+        break;
 
-          case '/cadastroDispositivo':
-          return 'Cadastro de Dispositivos'
-          break;
-
-
+      case '/cadastroDispositivo':
+        return 'Cadastro de Dispositivos'
+        break;
 
       default:
+        return 'GastSix'
         break;
     }
   }
