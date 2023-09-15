@@ -47,10 +47,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path='/relatorioMovimentacao' element={<Rel_Movimentacao />} />
         <Route path='/relatorioOperadores' element={<Rel_Operadores />} />
         <Route path='/relatorioEstoque' element={<Rel_Estoque />} />
-        <Route path='/relatorioMovimentacao' element={<Rel_Movimentacao />} />
-        <Route path='/relatorioOperadores' element={<Rel_Operadores />} />
-        <Route path='/relatorioEstoque' element={<Rel_Estoque />} />
-        <Route path='/relatorioEstoque' element={<Rel_Estoque />} />
         <Route path='/relatorioMovimentacao' element={<Log_Home />} />
         <Route path='/relatorioOperadores' element={<Login />} />
         <Route path='/relatorioEstoque' element={<Quem_Somos />} />

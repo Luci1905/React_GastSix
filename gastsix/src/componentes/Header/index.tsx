@@ -12,10 +12,44 @@ function Header() {
       case '/cadastroProduto':
         return 'Cadastro de Produtos'
         break;
-        
-      case '/cadastroProduto':
-        return 'Cadastro de Produtos'
+
+      case '/cadastroFornecedores':
+        return 'Cadastro de Fornecedores'
         break;
+
+      case '/entradaEstoque':
+        return 'Entrada de Estoque'
+        break;
+
+        case '/ajusteEstoque':
+        return 'Ajustes de Estoque'
+        break;
+
+        case '/consultaEstoque':
+        return 'Consulta de Estoque'
+        break;
+
+        case '/visualizarPedido':
+        return 'Visualizar Pedidos'
+        break;
+
+        case '/lancarPedido':
+        return 'Lançar Pedidos'
+        break;
+
+        case '/importarPedido':
+          return 'Importar Pedidos'
+          break;
+
+          case '/cadastroDispositivo':
+          return 'Cadastro de Dispositivos'
+          break;
+
+          case '/cadastroDispositivo':
+          return 'Cadastro de Dispositivos'
+          break;
+
+
 
       default:
         break;
