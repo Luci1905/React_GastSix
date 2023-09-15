@@ -25,6 +25,7 @@ function Rel_Operadores() {
                                 name="input__dataadm"
                                 id=""
                                 onChange={(e) => setDataInicial(e.target.value)}
+                                required
                             />
                         </div>
                         <div className="div_alinhamento_data">
@@ -35,6 +36,7 @@ function Rel_Operadores() {
                                 name="input__dataadm"
                                 id=""
                                 onChange={(e) => setDataFinal(e.target.value)}
+                                required
                             />
                         </div>
                     </div>
