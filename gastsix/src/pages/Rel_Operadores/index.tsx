@@ -1,14 +1,8 @@
 import "./style.css";
 
-import imgRelmov from "../../assets/img/img_rel_movimentacao.png";
+import imgRelOp from "../../assets/img/img_rel_operadores.png"
 
-//Hooks
-import { useState } from "react"
-
-function Rel_Movimentacao() {
-    const [dataInicial, setDataInicial] = useState<string>("");
-    const [dataFinal, setDataFinal] = useState<string>("");
-
+function Rel_Operadores() {
     return (
         <main className="banner">
             {/*indica o conteudo principal*/}
@@ -23,8 +17,6 @@ function Rel_Movimentacao() {
                                 type="date"
                                 name="input__dataadm"
                                 id=""
-                                onChange={(e) => setDataInicial(e.target.value)}
-                                required
                             />
                         </div>
                         <div className="div_alinhamento_data">
@@ -34,14 +26,12 @@ function Rel_Movimentacao() {
                                 type="date"
                                 name="input__dataadm"
                                 id=""
-                                onChange={(e) => setDataFinal(e.target.value)}
-                                required
                             />
                         </div>
                     </div>
                     <img
                         className="img_rel_movimentacao"
-                        src={imgRelmov}
+                        src={imgRelOp}
                         alt=""
                     />
                     <div className="div_alinhamento_botao_cadastrar">
@@ -59,4 +49,4 @@ function Rel_Movimentacao() {
     )
 
 }
-export default Rel_Movimentacao;
+export default Rel_Operadores;
