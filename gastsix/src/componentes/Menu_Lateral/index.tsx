@@ -2,11 +2,11 @@ import { Link, useLocation } from "react-router-dom";
 import "./style.css"
 import menu_inferior from "../../assets/img/menu_inferior.png"
 import menu_superior from "../../assets/img/menu_superior.png"
+import { useEffect } from "react";
 
 
 function MenuLateral() {
   const location = useLocation();
-
 
   function mostrarMenu() {
 
@@ -231,10 +231,12 @@ function MenuLateral() {
                   relatórios &gt;
                 </a>
                 <hr />
-                <Link to={"/loginHome"}>sair</Link>
-                <Link to={""}>
+                <Link to={"/"}>sair</Link>
+                <a href="">
+                  {" "}
                   <img src={menu_inferior} alt="" />
-                </Link>
+                </a>
+
               </nav>
             </aside>
             {/* MENU CADASTROS */}
