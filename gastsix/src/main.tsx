@@ -48,7 +48,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path='/relatorioOperadores' element={<Rel_Operadores />} />
         <Route path='/relatorioEstoque' element={<Rel_Estoque />} />
         <Route path='/loginHome' element={<Log_Home />} />
-        <Route path='/login' element={<Login />} />
+        <Route path='/' element={<Login />} />
         <Route path='/quemsomos' element={<Quem_Somos />} />
         <Route path='/cadastrousuario' element={<Cad_Usuario />} />
       </Routes>

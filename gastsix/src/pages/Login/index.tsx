@@ -1,37 +1,47 @@
 //estilizacao
 import "./style.css";
 
+import { Link } from "react-router-dom";
+
 //imagens
 import imgLOGO from "../../assets/img/LOGO.png";
+import { useNavigate } from "react-router-dom";
 
 
 function Login() {
-    return (
+  const navigate = useNavigate();
 
-<main>
-  <div className="big_logo">
-    <img src={imgLOGO} alt="logo gastsix" />
-  </div>
-  <div className="box_login">
-    <h2>login</h2>
-    <div className="preenchimentos">
-      <div className="usuario">
-        <label htmlFor="usuário">Usuário:</label>
-        <input type="text" />
-      </div>
-      <div className="senha">
-        <label htmlFor="senha">Senha:</label>
-        <input type="password" id="password" />
-      </div>
+  return (
+    <div className="alinhamento_login">
+      <main>
+        <div className="login_container">
+          <div className="big_logo">
+            <img src={imgLOGO} alt="logo gastsix" />
+          </div>
+          <div className="box_login">
+            <h2>login</h2>
+            <div className="preenchimentos">
+              <div className="usuario">
+                <label htmlFor="usuário">Usuário:</label>
+                <input type="text" />
+              </div>
+              <div className="senha">
+                <label htmlFor="senha">Senha:</label>
+                <input type="password" id="password" />
+              </div>
+            </div>
+            <button onClick={() => navigate("/loginHome")}>
+              Entrar
+            </button>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <Link to={"/qem_somos"}> quem somos </Link>
+        <Link to={"/qem_somos"}> suporte </Link>
+      </footer>
     </div>
-    <button onClick="window.location.href = './log_home/index.html';">
-        
-      Entrar
-    </button>
-  </div>
-</main>
-
-);
+  );
 }
 
 export default Login;
