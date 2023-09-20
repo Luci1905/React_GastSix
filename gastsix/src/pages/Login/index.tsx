@@ -6,12 +6,10 @@ import { Link } from "react-router-dom";
 //imagens
 import imgLOGO from "../../assets/img/LOGO.png";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
 
 
 function Login() {
   const navigate = useNavigate();
-
 
   return (
     <div className="alinhamento_login">
