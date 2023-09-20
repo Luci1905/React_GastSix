@@ -1,8 +1,8 @@
 //estilizacao
+import { useState } from "react";
 import "./style.css";
 
 //Hook
-import { useState } from "React"
 
 function Cad_Usuario() {
   const [nome, setNome] = useState<string>("");
