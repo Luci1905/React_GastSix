@@ -110,7 +110,6 @@ function Cad_Fornecedores() {
         <form className="formulario-central">
           <div className="div__alinhamento_campos">
             <label htmlFor="input__id">Id:</label>
-<<<<<<< HEAD
             <input type="text" name="input__id" id="" />
           </div>
           <div className="div__alinhamento_campos">
@@ -136,7 +135,6 @@ function Cad_Fornecedores() {
           <div className="div__alinhamento_campos">
             <label htmlFor="input__end">Endereço:</label>
             <input type="text" name="input__end" id="" />
-=======
             <input
               type="text"
               name="input__id"
@@ -207,7 +205,6 @@ function Cad_Fornecedores() {
               onChange={(e) => setEndereco(e.target.value)}
               required
             />
->>>>>>> cad_fornecedores
           </div>
           <button className="botao_cadastrar" type="submit">
             Cadastrar
