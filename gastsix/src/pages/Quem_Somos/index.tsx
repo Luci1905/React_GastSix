@@ -61,7 +61,7 @@ function Quem_Somos() {
           </p>
           <p>
             A ideia do nome veio pela referência do Grupo 6 (com os integrantes
-            Cícero, Edgard, Emily, Felipe, Luciane).
+            Cícero, Edgard, Emily, Felipe, Joy, Luciane).
           </p>
           <p>
             “Gast” em alemão, em sua tradução é “cliente” ou “convidado”. O que
