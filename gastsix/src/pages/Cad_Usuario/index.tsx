@@ -127,6 +127,7 @@ function Cad_Usuario() {
               id=""
               onChange={(e) => setConfirmarSenha(e.target.value)}
               required
+              onBlur={validarSenha}
             />
           </div>
           <button className="botao_cadastrar" type="submit">
