@@ -3,6 +3,9 @@ import "./style.css";
 import imgRelmov from "../../assets/img/img_rel_movimentacao.png";
 import { useEffect } from "react";
 
+//Hooks
+import { useState } from "react"
+
 function Rel_Movimentacao() {
 
     function recolherMenu() {
@@ -37,6 +40,8 @@ function Rel_Movimentacao() {
         //executa uma ação após o componente ser recarregado
         recolherMenu();
       }, [])
+    const [dataInicial, setDataInicial] = useState<string>("");
+    const [dataFinal, setDataFinal] = useState<string>("");
 
     return (
         <main className="banner">
@@ -52,6 +57,8 @@ function Rel_Movimentacao() {
                                 type="date"
                                 name="input__dataadm"
                                 id=""
+                                onChange={(e) => setDataInicial(e.target.value)}
+                                required
                             />
                         </div>
                         <div className="div_alinhamento_data">
@@ -61,6 +68,8 @@ function Rel_Movimentacao() {
                                 type="date"
                                 name="input__dataadm"
                                 id=""
+                                onChange={(e) => setDataFinal(e.target.value)}
+                                required
                             />
                         </div>
                     </div>
