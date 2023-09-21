@@ -1,10 +1,11 @@
+//estilizacao
+import "./style.css";
+
+//imagens
+import imgLOGO from "../../assets/img/LOGO.png";
 import { useEffect } from "react";
-import "./style.css"
 
-//hook
-import { useState } from "react";
-
-function Imp_Pedido() {
+function Quem_Somos() {
 
   function recolherMenu() {
 
@@ -38,35 +39,42 @@ function Imp_Pedido() {
     //executa uma ação após o componente ser recarregado
     recolherMenu();
   }, [])
-  const [selecionararquivo, setSelecionarArquivo] = useState<string>("");
 
   return (
     <main className="banner">
   {/*indica o conteudo principal*/}
   <section className="section_formulario">
-  {/*tag section indica uma secao*/}
-  <form>
-    <div className="div_alinhamento_campos">
-      <label htmlFor="selecior_arquivo">Selecionar Arquivo:</label>
-      <input 
-      type="text" 
-      name="selecior_arquivo" 
-      id=""
-      onChange={(e) => setSelecionarArquivo(e.target.value)}
-      required 
-      />
+    {/*tag section indica uma secao*/}
+    <div className="div_quemsomos">
+      <div className="alinhamento_quemsomos">
+        <h3>Quem somos</h3>
+      </div>
+      <div className="alinhamento_logo_texto">
+        <div className="alinhamento_central">
+          <img src={imgLOGO} alt="" />
+        </div>
+        <div className="alinhamento_texto">
+          <p>
+            A GastSix (ou G6) é uma empresa que uniu alunos do SENAI Informática
+            e chegou com o intuito de otimizar a operação da montadora
+            Volkswagen.
+          </p>
+          <p>
+            A ideia do nome veio pela referência do Grupo 6 (com os integrantes
+            Cícero, Edgard, Emily, Felipe, Joy, Luciane).
+          </p>
+          <p>
+            “Gast” em alemão, em sua tradução é “cliente” ou “convidado”. O que
+            representa bem a ideia do projeto. Somos um grupo do Senai convidado
+            pela Fundação Grupo Volkswagen para esse projeto acontecer.
+          </p>
+          <p>6 pessoas no grupo dedicadas ao procedimento do projeto.</p>
+        </div>
+      </div>
     </div>
-    <div className="div_alinhamento_botao_importar">
-      <button className="botao_importar" type="submit">
-        Importar
-      </button>
-    </div>
-  </form>
-</section>
-
+  </section>
 </main>
-
-  )
+  );
 }
 
-export default Imp_Pedido;
+export default Quem_Somos;

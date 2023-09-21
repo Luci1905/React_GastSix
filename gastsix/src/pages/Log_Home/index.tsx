@@ -1,10 +1,14 @@
+//estilizacao
+import "./style.css";
+
+//imagens
+import imgprod from "../../assets/img/prod_segundo.png";
+import imgqtd from "../../assets/img/qtd_prod_hora.png";
+import imgtempo from "../../assets/img/tempo_em_min.png";
+import imgmeta from "../../assets/img/meta_prop.png";
 import { useEffect } from "react";
-import "./style.css"
 
-//hook
-import { useState } from "react";
-
-function Imp_Pedido() {
+function Log_Home() {
 
   function recolherMenu() {
 
@@ -38,35 +42,22 @@ function Imp_Pedido() {
     //executa uma ação após o componente ser recarregado
     recolherMenu();
   }, [])
-  const [selecionararquivo, setSelecionarArquivo] = useState<string>("");
 
   return (
     <main className="banner">
-  {/*indica o conteudo principal*/}
-  <section className="section_formulario">
-  {/*tag section indica uma secao*/}
-  <form>
-    <div className="div_alinhamento_campos">
-      <label htmlFor="selecior_arquivo">Selecionar Arquivo:</label>
-      <input 
-      type="text" 
-      name="selecior_arquivo" 
-      id=""
-      onChange={(e) => setSelecionarArquivo(e.target.value)}
-      required 
-      />
-    </div>
-    <div className="div_alinhamento_botao_importar">
-      <button className="botao_importar" type="submit">
-        Importar
-      </button>
-    </div>
-  </form>
-</section>
-
-</main>
+      < section className="dash" >
+        <div className="primeiros_dashs">
+          <img src={imgprod} alt="" />
+          <img src={imgqtd} alt="" />
+        </div>
+        <div className="segundos_dash">
+          <img src={imgtempo} alt="" />
+          <img src={imgmeta} alt="" />
+        </div>
+      </section >
+    </main >
 
   )
 }
 
-export default Imp_Pedido;
+export default Log_Home;

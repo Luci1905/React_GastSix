@@ -1,3 +1,55 @@
+
+.posiciomaneto_menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+}
+.posiciomaneto_menu img {
+    width: 100px;
+}  
+.menu_barras{
+    position: absolute;
+    left: 40px;
+    top: 140px;
+    display: initial;  
+}
+.menu_lateral{
+    background: radial-gradient(50% 50% at 50% 50%, rgba(0, 99, 132, 0.24) 81.56%, rgba(0, 99, 132, 0) 130%);
+    backdrop-filter: blur(48.5px); 
+    font-family: var(--font1);
+    flex-direction: column;
+    align-items: center;
+    display: none;    
+    z-index: 1;
+    position: absolute;
+    left: 30px;
+    top: 100px; 
+    font-weight: bold;
+} 
+.menu_lateral a {
+    color: var(--branco);
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 20px;
+    font-size: 20PX; 
+} 
+.menu_lateral a img{
+    width: 100%;
+}
+hr {
+    width: 90px;
+    height: 2px;
+    background-color: var(--branco);
+}
+
+.menu_barras svg{
+    height: 60px;
+}
+
+
+
+
 /* SECAO FORMULARIO*/
 
 .aj_section__formulario {
