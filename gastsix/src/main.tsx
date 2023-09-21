@@ -15,9 +15,6 @@ import Ent_Estoque from "./pages/Ent_Estoque";
 import Con_Estoque from "./pages/Con_Estoque";
 import Cad_Dispositivo from './pages/Cad_Dispositivo';
 import Rel_Movimentacao from './pages/Rel_Movimentacao';
-
-//estilização global
-import "./index.css";
 import Rel_Operadores from './pages/Rel_Operadores';
 import Rel_Estoque from './pages/Rel_Estoque';
 import Imp_Pedido from './pages/Imp_Pedido';
@@ -40,13 +37,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <Routes>{/*Indica uma lista de rotas*/}
         <Route path='/cadastroProduto' element={<Cad_Produto />} /> {/*Indica o caminho do componente e o nome da rota dele*/}
         <Route path='/cadastroFornecedores' element={<Cad_Fornecedores />} />
-<<<<<<< HEAD
-        <Route path='/telaAjuste' element={<Tel_Ajuste />} />
-        <Route path='/entEstoque' element={<Ent_Estoque />} />
-        <Route path='/conEstoque' element={<Con_Estoque />} />
-        <Route path='/cadastroDispositivo' element={<Cad_Dispositivo />} />
-        <Route path='/relatorioMovimentacao' element={<Rel_Movimentacao />} />
-=======
         <Route path='/ajusteEstoque' element={<Tel_Ajuste />} />
         <Route path='/entradaEstoque' element={<Ent_Estoque />} />
         <Route path='/consultaEstoque' element={<Con_Estoque />} />
@@ -57,18 +47,10 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path='/relatorioMovimentacao' element={<Rel_Movimentacao />} />
         <Route path='/relatorioOperadores' element={<Rel_Operadores />} />
         <Route path='/relatorioEstoque' element={<Rel_Estoque />} />
-<<<<<<< HEAD
         <Route path='/loginHome' element={<Log_Home />} />
         <Route path='/' element={<Login />} />
         <Route path='/quemsomos' element={<Quem_Somos />} />
         <Route path='/cadastrousuario' element={<Cad_Usuario />} />
-=======
-        <Route path='/relatorioMovimentacao' element={<Log_Home />} />
-        <Route path='/relatorioOperadores' element={<Login />} />
-        <Route path='/relatorioEstoque' element={<Quem_Somos />} />
-        <Route path='/relatorioEstoque' element={<Cad_Usuario />} />
->>>>>>> e9515720991872c05f1a0258ce9f16433252f057
->>>>>>> rel_movimentacao
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
