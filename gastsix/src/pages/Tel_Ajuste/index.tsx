@@ -1,7 +1,12 @@
 import { useEffect } from "react";
 import "./style.css"
 
+import { useState} from "react";
+
 function Tel_Ajuste() {
+
+  const [codigo, setCodigo] = useState<string>("");
+  const [ajustar, setAjustarQuantidade] = useState<string>("");
 
   function recolherMenu() {
 
@@ -44,7 +49,13 @@ function Tel_Ajuste() {
   <form className="aj_formulario-central">
     <div className="aj_div__alinhamento_campos">
       <label htmlFor="input__codigo">Codigo:</label>
-      <input type="text" name="input__codigo" id="" />
+      <input 
+      type="text" 
+      name="input__codigo" 
+      id=""
+      onChange={(e) => setCodigo(e.target.value)}
+      required
+      />
     </div>
     <button className="aj_botao" type="submit">
       Buscar
@@ -80,7 +91,13 @@ function Tel_Ajuste() {
       >
         Ajustar quantidade:
       </label>
-      <input type="text" name="input__ajustar quantidade" id="" />
+      <input 
+      type="text" 
+      name="input__ajustar quantidade" 
+      id=""
+      onChange={(e) => setAjustarQuantidade(e.target.value)}
+      required 
+      />
     </div>
     <button className="aj_botao" type="submit">
       Inserir
