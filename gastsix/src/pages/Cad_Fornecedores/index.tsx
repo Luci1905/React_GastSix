@@ -3,15 +3,16 @@ import "./style.css";
 
 //Hook
 import { useState } from "react";
+import api from "../../utils/api";
 
 function Cad_Fornecedores() {
-  const [id, setId] = useState<string>("");
   const [nome, setNome] = useState<string>("");
   const [cnpj, setCnpj] = useState<string>("");
   const [ie, setIe] = useState<string>("");
   const [razaosocial, setRazaosocial] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [endereco, setEndereco] = useState<string>("");
+
 
   function mascaraCNPJ(event: any) {
     console.log(event.target.value);
@@ -55,6 +56,30 @@ function Cad_Fornecedores() {
 
   }
 
+  function cadastrarFornecedor(event: any) {
+    event.preventDefault();
+
+    const objFornecedor = {
+      nome: nome,
+      cnpj: cnpj,
+      ie: ie,
+      razaosocial: razaosocial,
+      email: email,
+      endereco: endereco
+    };
+
+    api.post('fornecedor', objFornecedor)
+      .then((response) => {
+        alert("Cadastro fornecedor concluído com sucesso!");
+      })
+      .catch((error) => {
+        if (error.response.status === 400) {
+          alert(error.response.data);
+        }
+
+      })
+  }
+
   useEffect(() => {
     //executa uma ação após o componente ser recarregado
     recolherMenu();
@@ -65,17 +90,7 @@ function Cad_Fornecedores() {
       {/*indica o conteudo principal*/}
       <section className="section__formulario">
         {/*tag section indica uma secao*/}
-        <form className="formulario-central">
-          <div className="div__alinhamento_campos">
-            <label htmlFor="input__id">Id:</label>
-            <input 
-            type="text" 
-            name="input__id" 
-            id=""
-            onChange={(e) => setId(e.target.value)}
-            required
-            />
-          </div>
+        <form className="formulario-central" onSubmit={cadastrarFornecedor}>
           <div className="div__alinhamento_campos">
             <label htmlFor="input__nome">Nome:</label>
             <input
