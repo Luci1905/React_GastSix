@@ -2,6 +2,7 @@
 import { useState } from "react";
 import "./style.css";
 import { useEffect } from "react";
+import api from "../../utils/api";
 
 //Hook
 
@@ -13,6 +14,8 @@ function Cad_Usuario() {
   const [dataadm, setDataAdm] = useState<string>("");
   const [senha, setSenha] = useState<string>("");
   const [confirmarsenha, setConfirmarSenha] = useState<string>("");
+  const [funcao, setfuncao] = useState<string>("");
+
 
   function mascaraCPF(event: any) {
     // console.log(event.target.value);
@@ -63,6 +66,32 @@ function Cad_Usuario() {
 
   }
 
+  function cadastrarUsuario(event : any){
+    event.preventDefault(); 
+
+    const objUsuario = {
+     nome:nome,
+     cpf:cpf,
+     matricula:matricula,
+     email:email,
+     dataadm: dataadm,
+     senha:senha,
+     funcao:funcao
+
+    };
+
+    api.post('usuarios', objUsuario)
+    .then((response)=>{
+      alert("Cadastro usuario concluido com sucesso!");
+    })
+    .catch((error) => {
+      if (error.response.status === 400){
+        alert(error.response.data);
+      }
+      
+    })
+  }
+
   useEffect(() => {
     //executa uma ação após o componente ser recarregado
     recolherMenu();
@@ -73,7 +102,7 @@ function Cad_Usuario() {
       {/*indica o conteudo principal*/}
       <section className="section__formulario">
         {/*tag section indica uma secao*/}
-        <form className="formulario-central">
+        <form className="formulario-central" onSubmit={cadastrarUsuario}>
           <div className="div__alinhamento_campos">
             <label htmlFor="input__nome">Nome:</label>
             <input
@@ -122,13 +151,16 @@ function Cad_Usuario() {
           <div className="div__alinhamento_funcao_data">
             <div className="div__alinhamento__funcao">
               <label htmlFor="">Função:</label>
-              <select name="" id="">
+              <select
+               name="" 
+               id=""
+               onChange={(e) => setfuncao(e.target.value)}>
                 <option disabled={true} selected={true} value="">
                   Selecione
                 </option>
-                <option value="">Administrador</option>
-                <option value="">Funcionario</option>
-                <option value="">Supervisor</option>
+                <option value="ADMIN">Administrador</option>
+                <option value="OPERADOR">Operador</option>
+                <option value="SUPERVISOR">Supervisor</option>
               </select>
             </div>
             <div className="div__alinhamento__data">
