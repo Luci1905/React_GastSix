@@ -41,8 +41,8 @@ function Lan_Pedido() {
     const objPedido = {
       setor:setor,
       idpedido: idpedido,
-      usuarioperador: usuario_perador,
-      usuariosupervisor: usuario_supervisor,
+      usuario_operador: usuario_operador,
+      usuario_supervisor: usuario_supervisor,
       observacoes: observacoes
     };
 
@@ -64,7 +64,7 @@ function Lan_Pedido() {
   }, [])
   const [setor, setSetor] = useState<string>("");
   const [idpedido, setIdPedido] = useState<string>("");
-  const [usuario_perador, setUsuarioOperador] = useState<string>("");
+  const [usuario_operador, setUsuarioOperador] = useState<string>("");
   const [usuario_supervisor, setUsuarioSupervisor] = useState<string>("");
   const [observacoes, setObservacoes] = useState<string>("");
 
