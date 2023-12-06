@@ -3,6 +3,7 @@ import "./style.css"
 
 //Hook
 import { useState } from "react";
+import api from "../../utils/api";
 
 function Lan_Pedido() {
 
@@ -34,29 +35,52 @@ function Lan_Pedido() {
 
   }
 
+  function lancarPedido(event: any){
+    event.preventDefault();
+
+    const objPedido = {
+      setor:setor,
+      idpedido: idpedido,
+      usuarioperador: usuario_perador,
+      usuariosupervisor: usuario_supervisor,
+      observacoes: observacoes
+    };
+
+    api.post('pedido', objPedido)
+    .then((response) =>{
+      alert("Pedido lançado com sucesso!")
+    })
+    .catch((error) => {
+      if (error.response.status === 400) {
+        alert(error.response.data);
+      }
+
+    })
+  }
+
   useEffect(() => {
     //executa uma ação após o componente ser recarregado
     recolherMenu();
   }, [])
-  const [CoddoProduto, setCodDoProduto] = useState<string>("");
-  const [NumPedido, setNumPedido] = useState<string>("");
-  const [Operador, setOperador] = useState<string>("");
-  const [Supervisor, setSupervisor] = useState<string>("");
-  const [Justificativa, setJustificativa] = useState<string>("");
+  const [setor, setSetor] = useState<string>("");
+  const [idpedido, setIdPedido] = useState<string>("");
+  const [usuario_perador, setUsuarioOperador] = useState<string>("");
+  const [usuario_supervisor, setUsuarioSupervisor] = useState<string>("");
+  const [observacoes, setObservacoes] = useState<string>("");
 
   return (
     <main className="banner">
       {/*indica o conteudo principal*/}
-      <section className="section__formulario">
+      <section className="section__formulario" onSubmit={lancarPedido}>
         {/*tag section indica uma secao*/}
         <form className="formulario-central">
           <div className="div__alinhamento_campos">
-            <label htmlFor="input__cod">Cod.do Produto:</label>
+            <label htmlFor="input__cod">Setor:</label>
             <input
               type="text"
               name="input__cod"
               id=""
-              onChange={(e) => setCodDoProduto(e.target.value)}
+              onChange={(e) => setSetor(e.target.value)}
               required
             />
           </div>
@@ -66,7 +90,7 @@ function Lan_Pedido() {
               type="text"
               name="input__num"
               id=""
-              onChange={(e) => setNumPedido(e.target.value)}
+              onChange={(e) => setIdPedido(e.target.value)}
               required
             />
           </div>
@@ -76,7 +100,7 @@ function Lan_Pedido() {
               type="text"
               name="input__ope"
               id=""
-              onChange={(e) => setOperador(e.target.value)}
+              onChange={(e) => setUsuarioOperador(e.target.value)}
               required
             />
           </div>
@@ -86,18 +110,18 @@ function Lan_Pedido() {
               type="text"
               name="input__sup"
               id=""
-              onChange={(e) => setSupervisor(e.target.value)}
+              onChange={(e) => setUsuarioSupervisor(e.target.value)}
               required
             />
           </div>
           <div className="div__alinhamento_justificativa">
-            <label htmlFor="input__jus">Justificativa:</label>
+            <label htmlFor="input__jus">Observações:</label>
             <input 
             type="text" 
             name="input__jus" 
             id=""
-            onChange={(e) => setJustificativa(e.target.value)}
-              required 
+            onChange={(e) => setObservacoes(e.target.value)}
+            required 
             />
           </div>
           <button className="botao_lancar" type="submit">
