@@ -3,6 +3,7 @@ import "./style.css"
 
 //Hook
 import { useState } from "react";
+import api from "../../utils/api";
 
 function Cad_Produtos() {
 
@@ -34,6 +35,30 @@ function Cad_Produtos() {
 
   }
 
+  function cadastrarProduto(event:any) {
+    event.preventDefault();
+
+    const objProduto = {
+      descricao: descricao,
+      partnumber: partnumber,
+      setor: setor,
+      codigosap: codigosap
+    };
+
+    api.post('produtos', objProduto)
+    .then((response) => {
+      alert("Cadastro produto concluído com sucesso!");
+    })
+    .catch((error) => {
+      if (error.response.status === 400) {
+        alert(error.response.data);
+      }
+
+    })
+
+
+  }
+
   useEffect(() => {
     //executa uma ação após o componente ser recarregado
     recolherMenu();
@@ -41,8 +66,8 @@ function Cad_Produtos() {
   
   const [descricao, setDescricao] = useState<string>("");
   const [partnumber, setPartnumber] = useState<string>("");
-  const [codigoalternativo, setCodigoAlternativo] = useState<string>("");
-  const [codigofornecedor, setCodigoFornecedor] = useState<string>("");
+  const [setor, setSetor] = useState<string>("");
+  // const [codigofornecedor, setCodigoFornecedor] = useState<string>("");
   const [codigosap, setCodigoSap] = useState<string>("");
 
 
@@ -51,7 +76,7 @@ function Cad_Produtos() {
       {/*indica o conteudo principal*/}
       <section className="section__formulario">
         {/*tag section indica uma secao*/}
-        <form className="formulario-central">
+        <form className="formulario-central" onSubmit={cadastrarProduto}>
           <div className="div__alinhamento_campos">
             <label htmlFor="input__descricao">Descrição:</label>
             <input
@@ -73,16 +98,16 @@ function Cad_Produtos() {
             />
           </div>
           <div className="div__alinhamento_campos">
-            <label htmlFor="input__codigoalt">Código Alternativo:</label>
+            <label htmlFor="input__codigoalt">Setor:</label>
             <input
               type="text"
               name="input__codigoalt"
               id=""
-              onChange={(e) => setCodigoAlternativo(e.target.value)}
+              onChange={(e) => setSetor(e.target.value)}
               required
             />
           </div>
-          <div className="div__alinhamento_campos">
+          {/* <div className="div__alinhamento_campos">
             <label htmlFor="input__codigofor">Código Fornecedor:</label>
             <input
               type="text"
@@ -91,7 +116,7 @@ function Cad_Produtos() {
               onChange={(e) => setCodigoFornecedor(e.target.value)}
               required
             />
-          </div>
+          </div> */}
           <div className="div__alinhamento_campos">
             <label htmlFor="input__codigosap">Código SAP:</label>
             <input

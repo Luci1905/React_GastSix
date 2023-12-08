@@ -45,17 +45,17 @@ function Header() {
         return 'Cadastro de Dispositivos'
         break;
 
-      case '/cadastroDispositivo':
-        return 'Cadastro de Dispositivos'
-        break;
+      // case '/cadastroDispositivo':
+      //   return 'Cadastro de Dispositivos'
+      //   break;
 
       default:
         return 'GastSix'
         break;
 
-      case '/cadastroDispositivo':
-        return 'Cadastro de Dispositivos'
-        break;
+      // case '/cadastroDispositivo':
+      //   return 'Cadastro de Dispositivos'
+      //   break;
 
       case '/relatorioMovimentacao':
         return 'Relatório de Operadores'
