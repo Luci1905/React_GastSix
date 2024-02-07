@@ -69,13 +69,14 @@ function Vis_Pedido() {
     <main className="banner">
       <ul>
         {
-          listaPedidos.map((lista: any, index) => {
+          listaPedidos.map((pedido: any, index) => {
             return <li key={index}>
               <CardPedido
-                id_pedido={lista.id}
-                descricao={lista.descricao}
-                usuario_operador={lista.usuario_operador}
-                usuario_supervisor={lista.usuario_supervisor}
+                id={pedido.id_pedido}
+                observacoes={pedido.observacoes}
+                usuario_operador={pedido.usuario_operador}
+                usuario_supervisor={pedido.usuario_supervisor}
+                setor={pedido.setor}
               />
             </li>
           })

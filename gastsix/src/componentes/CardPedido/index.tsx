@@ -3,16 +3,14 @@ import "./style.css";
 
 function CardPedido(props: any) {
     return (
-    <main>
         <div className="div_alinhamento_label">
-            <label htmlFor="input_id">Id Pedido</label>
-            <label htmlFor="input_descricao">Descrição</label>
-            <label htmlFor="input_usuario_operador">Usuario Operador</label>
-            <label htmlFor="input_usuario_supervisor">Usuario Supervisor</label>
-            <label htmlFor="input_setor">Setor</label>
+            <p>Id Pedido: {props.id}</p>
+            <p>Observações: {props.observacoes}</p>
+            <p>Usuario Operador: {props.usuario_operador}</p>
+            <p>Usuario Supervisor: {props.usuario_supervisor}</p>
+            <p>Setor: {props.setor}</p>
         </div>
-        
-    </main>);
+    );
 
 }
 
