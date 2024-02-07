@@ -78,7 +78,9 @@ function Vis_Pedido() {
                 usuario_supervisor={pedido.usuario_supervisor}
                 setor={pedido.setor}
               />
+              <br />
             </li>
+            
           })
         }
       </ul>
