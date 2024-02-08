@@ -44,14 +44,14 @@ h2 {
     height: 35px; 
 }
 
-.cartao__pedido{
+.cartao__produto{
     background: rgba(255, 255, 255, 0.11);
     border-radius: 20px;
     padding: 1em;
     margin-bottom: 2em;
 }
 
-.borda__pedido{
+.borda__produto{
     border-bottom: solid 2px white;
 }
 

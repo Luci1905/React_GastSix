@@ -11,11 +11,13 @@ import { useEffect } from "react";
 
 //Componentes
 import CardPedido from "../../componentes/CardPedido";
+import CardProduto from "../../componentes/CardProduto";
 
 function Vis_Pedido() {
   const [listaPedidos, setListaPedidos] = useState<any[]>([]);
-  const [DataFinal, setDataFinal] = useState<string>("");
-  const [porpedidos, setPorPedido] = useState<string>("");
+  const [listaProdutos, setListaProdutos] = useState<any[]>([]);
+  // const [DataFinal, setDataFinal] = useState<string>("");
+  // const [porpedidos, setPorPedido] = useState<string>("");
 
   function ListarPedidos() {
 
@@ -27,6 +29,18 @@ function Vis_Pedido() {
       })
       .catch((error) => console.log(error)
       )
+  }
+
+  function ListarProdutos() {
+    api.get("produto")
+      .then((response) => {
+        setListaProdutos(response.data)
+        console.log(response);
+
+      })
+      .catch((error) => console.log(error)
+      )
+
   }
 
   function recolherMenu() {
@@ -74,12 +88,23 @@ function Vis_Pedido() {
               <CardPedido
                 id={pedido.id_pedido}
                 observacoes={pedido.observacoes}
-                usuario_operador={pedido.usuario_operador}
                 usuario_supervisor={pedido.usuario_supervisor}
                 setor={pedido.setor}
               />
             </li>
-            
+
+          })
+        }
+      </ul>
+      <ul>
+        {
+          listaProdutos.map((produto: any, index) => {
+            return <li key={index}>
+              <CardProduto
+                id={produto.id}
+                item={produto.item}
+                />
+            </li>
           })
         }
       </ul>
