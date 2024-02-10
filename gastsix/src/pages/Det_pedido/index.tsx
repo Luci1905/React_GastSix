@@ -1,5 +1,4 @@
-//estilizacao
-import "./style.css"
+import "./style.css";
 
 //axios
 import api from "../../utils/api";
@@ -7,40 +6,29 @@ import api from "../../utils/api";
 //Hook
 import { useState } from "react";
 import { useEffect } from "react";
-
+import { useParams } from "react-router-dom";
 
 //Componentes
-import CardPedido from "../../componentes/CardPedido";
 import CardProduto from "../../componentes/CardProduto";
 
-function Vis_Pedido() {
-  const [listaPedidos, setListaPedidos] = useState<any[]>([]);
+function Det_Pedido() {
   const [listaProdutos, setListaProdutos] = useState<any[]>([]);
   // const [DataFinal, setDataFinal] = useState<string>("");
   // const [porpedidos, setPorPedido] = useState<string>("");
 
-  function ListarPedidos() {
+  const { idPedido } = useParams();
 
-    //consumo api - lista pedidos
-    api.get("pedido")
+
+  function ListarProdutos() {
+
+    //consumo api - lista pedidoproduto
+    api.get("pedido/" + idPedido)
       .then((response) => {
-        setListaPedidos(response.data)
+        setListaProdutos(response.data)
         console.log(response)
       })
       .catch((error) => console.log(error)
       )
-  }
-
-  function ListarProdutos() {
-    api.get("produto")
-      .then((response) => {
-        setListaProdutos(response.data)
-        console.log(response);
-
-      })
-      .catch((error) => console.log(error)
-      )
-
   }
 
   function recolherMenu() {
@@ -74,44 +62,26 @@ function Vis_Pedido() {
   useEffect(() => {
     //executa uma ação após o componente ser recarregado
     recolherMenu();
-    ListarPedidos();
+    ListarProdutos();
   }, [])
 
 
-
   return (
-    <main className="vis_pedido">
-      <ul>
-        {
-          listaPedidos.map((pedido: any, index) => {
-            return <li key={index}>
-              <CardPedido
-                id={pedido.id_pedido}
-                observacoes={pedido.observacoes}
-                usuario_supervisor={pedido.usuario_supervisor}
-                setor={pedido.setor}
-              />
-            </li>
-
-          })
-        }
-      </ul>
+    <main className="banner">
       <ul>
         {
           listaProdutos.map((produto: any, index) => {
             return <li key={index}>
               <CardProduto
-                id={produto.id}
-                item={produto.item}
-                />
+                id={produto.id_pedido}
+                quantidade={produto.quantidade_produto}
+              />
             </li>
           })
         }
       </ul>
-
-
     </main>
   )
 }
 
-export default Vis_Pedido;
+export default Det_Pedido;

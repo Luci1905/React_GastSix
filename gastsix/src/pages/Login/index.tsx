@@ -13,7 +13,7 @@ function Login() {
 
   return (
     <div className="alinhamento_login">
-      <main>
+      <main className="login">
         <div className="login_container">
           <div className="big_logo">
             <img src={imgLOGO} alt="logo gastsix" />

@@ -43,15 +43,16 @@ header {
 
 /*BANNER*/
 
-.banner {
+.vis_pedido {
     background-image: url(../../assets/img/background.png); 
     /* height: auto;  */
-     height: 944px; 
+    min-height: 944px; 
     background-size: cover;
-    justify-content: center;
+    /* justify-content: center; */
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding-top: 100px;
 }
 
 

@@ -24,6 +24,7 @@ import Cad_Usuario from './pages/Cad_Usuario';
 import Log_Home from './pages/Log_Home';
 import Login from './pages/Login';
 import Quem_Somos from './pages/Quem_Somos';
+import Det_Pedido from './pages/Det_pedido';
 
 //rotas
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -51,6 +52,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path='/' element={<Login />} />
         <Route path='/quemsomos' element={<Quem_Somos />} />
         <Route path='/cadastrousuario' element={<Cad_Usuario />} />
+        <Route path='/detalhesPedido/:idPedido' element={<Det_Pedido/>}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

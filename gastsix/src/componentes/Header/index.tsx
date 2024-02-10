@@ -45,6 +45,10 @@ function Header() {
         return 'Cadastro de Dispositivos'
         break;
 
+      case '/detalhesPedido':
+        return 'Detalhes do Pedido'
+        break; 
+
       // case '/cadastroDispositivo':
       //   return 'Cadastro de Dispositivos'
       //   break;

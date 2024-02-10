@@ -267,9 +267,11 @@ function MenuLateral() {
               <nav id="menu_lateral_pedidos" className="menu_lateral_pedidos">
                 <Link to={"/importarPedido"}>importar</Link>
                 <hr />
-                <Link to={"/visualizarPedido"}>visualizar</Link>
+                <Link to={"/lancarPedido"}>lancar</Link>
                 <hr />
-                <Link to={"/lancarPedido"}>lançar</Link>
+                <Link to={"/visualizarPedido"}>Visualizar</Link>
+                <hr/>
+                <Link to={"/detalhesPedido"}>Detalhes</Link>
               </nav>
             </aside>
             {/* MENU  RELATORIO */}
