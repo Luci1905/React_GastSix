@@ -140,11 +140,10 @@ footer a{
     fill: #C8D5DC;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1024px){
     header {
         font-size: 15px;
         width: 100%;
-
     }
 
     .div_header_1,
@@ -173,15 +172,12 @@ footer a{
         align-items: center;
     }
 
-    .big_logo {
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        width: 40%;
+    .big_logo{
+       display: none;
     }
 
     footer a{
-        font-size: 10px
+        font-size: 15px
     }
 
     input {
@@ -194,6 +190,10 @@ footer a{
 
     .preenchimentos{
         width: 80%;
+    }
+
+    .login_container{
+        justify-content: center;
     }
 
 

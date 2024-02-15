@@ -1,3 +1,14 @@
+.banner__movimentacao {
+    background-image: url(../../assets/img/background.png);
+    min-height: 944px;
+    background-size: cover;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
 /* SECAO FORMULARIO*/
 
 .section_formulario { 
@@ -69,16 +80,21 @@
 
 /*Responsividade*/
 
-@media screen and (max-width: 768px){
+@media screen and (min-width: 768px) and (max-width:1024){
+    .banner__movimentacao{
+        height: 944px;
+    }
+
     /* FORMULARIO CENTRAL*/
 
-    .formulario_central{
-        padding: 100px;
+    .formulario_central-mov{
+        padding: 100px 0;
         display: flex;
         flex-direction: column;
         align-items: center;
         margin: 20px;
     }
+  
     .section_formulario{
         width: 100%;
     }
@@ -98,6 +114,7 @@
         display: flex;
         flex-direction: column;
         align-items: center; 
+        margin: 0 auto;
     }
 
     .botao_gerar{

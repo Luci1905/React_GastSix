@@ -44,11 +44,11 @@ function Rel_Movimentacao() {
     const [dataFinal, setDataFinal] = useState<string>("");
 
     return (
-        <main className="banner">
+        <main className="banner__movimentacao">
             {/*indica o conteudo principal*/}
             <section className="section_formulario">
                 {/*tag section indica uma secao*/}
-                <form className="formulario_central">
+                <form className="formulario_central-mov" id="formulario__central_of-movimentacao">
                     <div className="div_alinhamento_funcao_data">
                         <div className="div_alinhamento_data">
                             <label htmlFor="input_dataadm">Data Inicial:</label>

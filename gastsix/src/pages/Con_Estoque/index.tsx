@@ -44,11 +44,11 @@ function Con_Estoque() {
   }, [])
 
   return (
-    <main className="banner">
+    <main className="banner__conestoque">
       {/*indica o conteudo principal*/}
       <section className="section_formulario">
         {/*tag section indica uma secao*/}
-        <form className="formulario_central">
+        <form className="formulario_central" id="form__central-id">
           <div className="div_alinhamento_funcao_data">
             <div className="div_alinhamento_data">
               <label htmlFor="input_dataadm">Data Inicial:</label>
@@ -94,7 +94,7 @@ function Con_Estoque() {
               </tbody>
             </table>
           </div>
-          <div className="div_alinhamento_botao_cadastrar">
+          <div className="div_alinhamento_botao_cadastrar" id="of">
             <button className="botao_gerar" type="submit">
               Gerar xml
             </button>

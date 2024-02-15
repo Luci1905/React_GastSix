@@ -69,9 +69,9 @@ function Lan_Pedido() {
   const [observacoes, setObservacoes] = useState<string>("");
 
   return (
-    <main className="banner">
+    <main className="banner__lancar">
       {/*indica o conteudo principal*/}
-      <section className="section__formulario" onSubmit={lancarPedido}>
+      <section className="section__formulario-lancarpedido" onSubmit={lancarPedido}>
         {/*tag section indica uma secao*/}
         <form className="formulario-central">
           <div className="div__alinhamento_campos">

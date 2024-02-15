@@ -86,10 +86,10 @@ header h1 {
     height: 40px;
 }
 
-.banner {
+.banner__home {
     background-image: url(../../assets/img/background.png);
     /* height: auto; */
-    height: 944px;
+    min-height: 944px;
     background-size: cover;
     justify-content: center;
     display: flex;
@@ -436,9 +436,17 @@ hr {
 
     /*Responsivo*/
 
-    @media screen and (max-width: 768px) {
+    @media screen and (min-width: 768px) and (max-width: 1024px){
 
         /*HEADER*/
+
+        .banner__home{
+            min-height: 820px;
+        }
+
+        .menu_barras svg{
+            height: 55px;
+        }
 
         .div_header_1{
             display: flex;
@@ -461,10 +469,16 @@ hr {
 
         .primeiros_dashs,
         .segundos_dash{
+            width: 80%;
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 25px;
+            flex-direction: row;
+            justify-content: center;
+            margin: 0 auto;
+            gap: 250px 25PX;
+        }
+
+        .primeiros_dashs{
+            margin-bottom: 5em;
         }
 
         .dash img{

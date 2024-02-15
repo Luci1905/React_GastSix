@@ -44,7 +44,7 @@ function Log_Home() {
   }, [])
 
   return (
-    <main className="banner">
+    <main className="banner__home">
       < section className="dash" >
         <div className="primeiros_dashs">
           <img src={imgprod} alt="" />

@@ -46,9 +46,9 @@ function Cad_Dispositivo() {
     const [sistemaOperacional, setSistemaOperacional] = useState<string>("");
 
     return (
-        <main className="banner">
+        <main className="banner__dispositivo">
             {/*indica o conteudo principal*/}
-            <section className="section__formulario">
+            <section className="section__formulario-dispositivo">
                 {/*tag section indica uma secao*/}
                 <form className="formulario-central">
                     <div className="div__alinhamento_campos">

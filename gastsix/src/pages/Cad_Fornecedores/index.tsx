@@ -86,9 +86,9 @@ function Cad_Fornecedores() {
   }, [])
 
   return (
-    <main className="banner">
+    <main className="banner__fornecedores">
       {/*indica o conteudo principal*/}
-      <section className="section__formulario">
+      <section className="section__formulario-fornecedores">
         {/*tag section indica uma secao*/}
         <form className="formulario-central" onSubmit={cadastrarFornecedor}>
           <div className="div__alinhamento_campos">

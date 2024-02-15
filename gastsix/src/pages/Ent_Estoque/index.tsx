@@ -37,9 +37,9 @@ function Ent_Estoque() {
   }, [])
 
   return (
-    <main className="banner">
+    <main className="banner__entrada">
   {/*indica o conteudo principal*/}
-  <section className="section__formulario">
+  <section className="section__formulario-entrada">
     {/*tag section indica uma secao*/}
     <form className="formulario-central">
       <div className="div__alinhamento_campos">

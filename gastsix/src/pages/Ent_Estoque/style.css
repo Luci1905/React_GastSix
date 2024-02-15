@@ -1,10 +1,21 @@
+.banner__entrada{
+    background-image: url(../../assets/img/background.png);
+    min-height: 944px;
+    height: 1000px;
+    background-size: cover;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 /* SECAO FORMULARIO*/
 
-.section__formulario {
+.section__formulario-entrada {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 50%;
     padding: 40px 0 30px 0;
     font-family: var(--font1);
 }
@@ -71,12 +82,15 @@
 /*Respansividade*/
 
 @media screen and (max-width: 768px) {
+    .section__formulario-entrada{
+        width: 70%;
+    }
 
     h1{
         font-size: 15px;
     }
-    .banner{
-        height: 1600px;
+    .banner__entrada{
+        height: 1200px;
     }
     .botao_fechar svg {
         height: 15px;

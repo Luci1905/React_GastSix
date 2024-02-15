@@ -1,3 +1,12 @@
+.banner__ajuste{
+    background-image: url(../../assets/img/background.png);
+    min-height: 944px;
+    background-size: cover;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 
 .posiciomaneto_menu {
     display: flex;
@@ -128,7 +137,14 @@ table * {
 
 /*Respansividade*/
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width:1024px){
+    .banner__ajuste{
+        height: 944px;
+    }
+  
+    .aj_section__formulario{
+        width: 80%;
+    }
 
     h1{
         font-size: 20px;

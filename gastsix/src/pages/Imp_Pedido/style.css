@@ -43,7 +43,7 @@ header {
 
 /*BANNER*/
 
-.banner {
+.banner__imppedido {
     background-image: url(../../assets/img/background.png);
     height: 944px;
     background-size: cover;
@@ -97,7 +97,10 @@ header {
 
 /*Respansividade*/
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1024px){
+.banner__imppedido{
+    height: 944px;
+}
 
 h1{
     font-size: 15px;

@@ -44,11 +44,11 @@ function Rel_Operadores() {
       }, [])
 
     return (
-        <main className="banner">
+        <main className="banner__relop">
             {/*indica o conteudo principal*/}
             <section className="section_formulario">
                 {/*tag section indica uma secao*/}
-                <form className="formulario_central">
+                <form className="formulario_central" id="formulario__central_of-relop">
                     <div className="div_alinhamento_funcao_data">
                         <div className="div_alinhamento_data">
                             <label htmlFor="input_dataadm">Data Inicial:</label>

@@ -39,11 +39,11 @@ function Rel_Estoque() {
       }, [])
 
     return (
-        <main className="banner">
+        <main className="banner__relest">
             {/*indica o conteudo principal*/}
-            <section className="section_formulario">
+            <section className="section_formulario-relest">
                 {/*tag section indica uma secao*/}
-                <form className="formulario_central">
+                <form className="formulario_central-relest">
                     <img src={imgRelEstoque} alt="" />
                     <div className="div_alinhamento_botao_cadastrar">
                         <button className="botao_gerar" type="submit">

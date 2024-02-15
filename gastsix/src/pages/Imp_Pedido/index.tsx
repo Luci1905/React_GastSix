@@ -42,7 +42,7 @@ function Imp_Pedido() {
   const [selecionararquivo, setSelecionarArquivo] = useState<string>("");
 
   return (
-    <main className="banner">
+    <main className="banner__imppedido">
   {/*indica o conteudo principal*/}
   <section className="section_formulario">
   {/*tag section indica uma secao*/}

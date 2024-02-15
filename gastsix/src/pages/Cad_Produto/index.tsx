@@ -72,9 +72,9 @@ function Cad_Produtos() {
 
 
   return (
-    <main className="banner">
+    <main className="banner__produto">
       {/*indica o conteudo principal*/}
-      <section className="section__formulario">
+      <section className="section__formulario-produto">
         {/*tag section indica uma secao*/}
         <form className="formulario-central" onSubmit={cadastrarProduto}>
           <div className="div__alinhamento_campos">

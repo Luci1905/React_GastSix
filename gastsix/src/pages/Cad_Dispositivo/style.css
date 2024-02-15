@@ -1,5 +1,15 @@
+.banner__dispositivo{
+    background-image: url(../../assets/img/background.png);
+    min-height: 944px;
+    background-size: cover;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 /* SECAO FORMULARIO*/
-.section__formulario {
+.section__formulario-dispositivo {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -44,11 +54,14 @@
 
 
 /*Responsividade*/
-@media screen and (max-width: 768px){
+@media screen and (min-width: 768px) and (max-width: 1024px){
+        header h1{
+            font-size: 35px
+        }
         /* FORMULARIO CENTRAL*/
 
-        .section__formulario {
-            width: 80%;
+        .section__formulario-dispositivo {
+            width: 70%;
         }
     
         .botao_cadastrar {

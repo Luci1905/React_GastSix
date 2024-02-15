@@ -42,7 +42,7 @@ function Tel_Ajuste() {
   }, [])
 
   return (
-    <main className="banner">
+    <main className="banner__ajuste">
   {/*indica o conteudo principal*/}
   <section className="aj_section__formulario">
   {/*tag section indica uma secao*/}

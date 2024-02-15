@@ -143,7 +143,10 @@ header {
 
 /*Respansividade*/
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .vis_pedido{
+        padding-top: 0;
+    }
     h1{
         font-size: 15px;
     }
@@ -175,6 +178,9 @@ header {
         width: 150%;
         margin: 20px;
     } 
+    .cartao__pedido{
+        margin-right: 7em;
+    }
 
     
 }

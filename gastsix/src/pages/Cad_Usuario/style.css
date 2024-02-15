@@ -1,6 +1,16 @@
+.banner__usuario{
+    background-image: url(../../assets/img/background.png);
+    min-height: 944px;
+    background-size: cover;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 
 /* SECAO FORMULARIO*/
-.section__formulario {
+.section__formulario-usuario {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -93,13 +103,13 @@
 
 
 /*Respansividade*/
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width:1024px){
 
     h1 {
         font-size: 15px;
     }
-    .banner{
-        height: 1500px;
+    .banner__usuario{
+        height: 1100px;
     }
     .botao_fechar svg {
         height: 15px;
@@ -151,73 +161,73 @@
 
     /*MENU CADASTRO*/
 
-.menu_lateral_cadastro{
-    font-size: 10px;
-    position: absolute;
-    left: 150px;
-    top: 150px;
-}
-.menu_lateral_cadastro a {
-    color: var(--branco);
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 7px;
-    font-size: 10px;
-}
+    .menu_lateral_cadastro{
+        font-size: 10px;
+        position: absolute;
+        left: 150px;
+        top: 150px;
+    }
+    .menu_lateral_cadastro a {
+        color: var(--branco);
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 7px;
+        font-size: 10px;
+    }
 
-/*MENU ESTOQUE*/
+    /*MENU ESTOQUE*/
 
-.menu_lateral_estoque{
-    font-size: 10px;
-    position: absolute;
-    left: 150px;
-    top: 185px;
-}
-.menu_lateral_estoque a {
-    color: var(--branco);
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 7px;
-    font-size: 10px;
-}
+    .menu_lateral_estoque{
+        font-size: 10px;
+        position: absolute;
+        left: 150px;
+        top: 185px;
+    }
+    .menu_lateral_estoque a {
+        color: var(--branco);
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 7px;
+        font-size: 10px;
+    }
 
-/*MENU PEDIDOS*/
+    /*MENU PEDIDOS*/
 
-.menu_lateral_pedidos{
-    font-size: 10px;
-    position: absolute;
-    left: 150px;
-    top: 220px;
-}
-.menu_lateral_pedidos a {
-    color: var(--branco);
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 7px;
-    font-size: 10px;
-}
+    .menu_lateral_pedidos{
+        font-size: 10px;
+        position: absolute;
+        left: 150px;
+        top: 220px;
+    }
+    .menu_lateral_pedidos a {
+        color: var(--branco);
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 7px;
+        font-size: 10px;
+    }
 
-/*MENU RELATORIOS*/
+    /*MENU RELATORIOS*/
 
-.menu_lateral_relatorios {
-    font-size: 10px;
-    position: absolute;
-    left: 150px;
-    top: 250px;
-}
-.menu_lateral_relatorios a {
-    color: var(--branco);
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 7px;
-    font-size: 10px;
-}
-/* FINAL MENU INTERATIVO*/
+    .menu_lateral_relatorios {
+        font-size: 10px;
+        position: absolute;
+        left: 150px;
+        top: 250px;
+    }
+    .menu_lateral_relatorios a {
+        color: var(--branco);
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 7px;
+        font-size: 10px;
+    }
+    /* FINAL MENU INTERATIVO*/
 *
     /* FORMULARIO CENTRAL*/
 
-    .section__formulario {
-        width: 80%;
+    .section__formulario-usuario {
+        width: 70%;
     }
 
     .div__alinhamento_funcao_data {
@@ -236,8 +246,9 @@
     } 
 
     .botao_cadastrar{
-        width: 90px;
-        font-size: 13px
+        width: 125px;
+        font-size: 13px;
+        margin-top: 4em
     }
 
 }

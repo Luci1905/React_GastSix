@@ -98,9 +98,9 @@ function Cad_Usuario() {
   }, [])
 
   return (
-    <main className="banner">
+    <main className="banner__usuario">
       {/*indica o conteudo principal*/}
-      <section className="section__formulario">
+      <section className="section__formulario-usuario">
         {/*tag section indica uma secao*/}
         <form className="formulario-central" onSubmit={cadastrarUsuario}>
           <div className="div__alinhamento_campos">
