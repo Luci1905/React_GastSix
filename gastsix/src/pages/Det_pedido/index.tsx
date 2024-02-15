@@ -12,7 +12,7 @@ import { useParams } from "react-router-dom";
 import CardProduto from "../../componentes/CardProduto";
 
 function Det_Pedido() {
-  const [listaProdutos, setListaProdutos] = useState<any[]>([]);
+  const [listaProdutos, setListaProdutos] = useState<any>();
   // const [DataFinal, setDataFinal] = useState<string>("");
   // const [porpedidos, setPorPedido] = useState<string>("");
 
@@ -24,8 +24,9 @@ function Det_Pedido() {
     //consumo api - lista pedidoproduto
     api.get("pedido/" + idPedido)
       .then((response) => {
-        setListaProdutos(response.data)
-        console.log(response)
+        setListaProdutos(response.data.pedidoProduto)
+        console.log("Pedido");
+        console.log(response.data.pedidoProduto)
       })
       .catch((error) => console.log(error)
       )
@@ -69,7 +70,7 @@ function Det_Pedido() {
   return (
     <main className="banner">
       <ul>
-        {
+        {/* {
           listaProdutos.map((produto: any, index) => {
             return <li key={index}>
               <CardProduto
@@ -78,7 +79,7 @@ function Det_Pedido() {
               />
             </li>
           })
-        }
+        } */}
       </ul>
     </main>
   )
